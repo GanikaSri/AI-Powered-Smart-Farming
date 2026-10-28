@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Trend Prediction</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+
+<nav class="navbar">
+<div class="brand">🌿 AI Smart Farming</div>
+</nav>
+
+<div class="sidebar">
+<a href="index.html">🧩 Home</a>
+<a href="weather.html">🌦️ Weather Prediction</a>
+<a href="disease.html">🌾Crop Disease Detection</a>
+<a href="crop.html">🌱Crop & Fertilizer Recommendation</a>
+<a href="market.html">📈 Market Trend Prediction</a>
+<a href="water.html">💧 Water Management</a>
+<a href="schemes.html">🏛️ Government Schemes Recommendation</a>
+<a href="storage.html">📦 Post Harvest Storage</a>
+<a href="about.html">💻 About</a>
+</div>
+
+
+<div class="main-content">
+    <!-- Header -->
+    <section class="page-header">
+      <h2>💧 Water Management</h2>
+      <p>
+        Get irrigation timing and water quantity recommendations based on soil
+        and weather conditions.
+      </p>
+    </section>
+
+    <!-- Form -->
+    <section class="container form-section">
+      <div class="card form-card">
+        <h4>Enter Irrigation Data</h4>
+
+        <form id="waterForm">
+          <label>Soil Moisture (%)</label>
+          <input type="number" id="moisture" required />
+
+          <label>Rainfall Forecast (mm)</label>
+          <input type="number" id="rainForecast" required />
+
+          <label>Crop Type</label>
+          <select id="cropType" required>
+            <option value="">-- Select Crop --</option>
+            <option value="Rice">Rice</option>
+            <option value="Wheat">Wheat</option>
+            <option value="Maize">Maize</option>
+            <option value="Sugarcane">Sugarcane</option>
+          </select>
+
+          <button type="submit" class="btn">Get Irrigation Plan</button>
+        </form>
+      </div>
+
+      <!-- RESULT CARD -->
+      <div id="resultCard" class="card result-card" style="display: none">
+        <h3>Irrigation Recommendation</h3>
+
+        <p>🌾 <strong>Crop:</strong> <span id="resCrop"></span></p>
+
+        <p>
+          🚦 <strong>Status:</strong>
+          <span id="resStatus" class="status"></span>
+        </p>
+
+        <p>
+          💧 <strong>Water Amount:</strong> <span id="resWater"></span> L/m²
+        </p>
+
+        <p>
+          📅 <strong>Next Irrigation:</strong> <span id="resNext"></span> day(s)
+        </p>
+
+        <p>
+          🧠 <strong>Reason:</strong>
+          <span id="resReason"></span>
+        </p>
+      </div>
+    </section>
+
+<button type="button" id="voiceBtn" class="btn">🎙️</button>
+</div>
+    <footer>
+        <p>&copy; 2026 AI Smart Farming System | Developed for Academic Project</p>
+    </footer>
+<script src="js/menu.js"></script>
+<script src="js/water.js"></script>
+<script src="js/voice/voice-water.js"></script>
+</body>
+</html>

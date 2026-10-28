@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crop & Fertilizer Recommendation </title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+
+<nav class="navbar">
+<div class="brand">🌿 AI Smart Farming</div>
+</nav>
+
+<div class="sidebar">
+<a href="index.html">🧩 Home</a>
+<a href="weather.html">🌦️ Weather Prediction</a>
+<a href="disease.html">🌾Crop Disease Detection</a>
+<a href="crop.html">🌱Crop & Fertilizer Recommendation</a>
+<a href="market.html">📈 Market Trend Prediction</a>
+<a href="water.html">💧 Water Management</a>
+<a href="schemes.html">🏛️ Government Schemes Recommendation</a>
+<a href="storage.html">📦 Post Harvest Storage</a>
+<a href="about.html">💻 About</a>
+</div>
+
+<div class="main-content">
+
+ <!-- Header -->
+    <section class="page-header">
+        <h2>🌾 Crop & Fertilizer Recommendation</h2>
+        <p>Get the best fertilizer and crop suggestions based on your soil data.</p>
+    </section>
+
+    <!-- Soil Form -->
+    <section class="container form-section">
+        <div class="card form-card">
+            <h4>Enter Soil Parameters</h4>
+            <form id="soilForm">
+                <label for="nitrogen">Nitrogen (N)</label>
+                <input type="number" id="nitrogen"  required>
+
+                <label for="phosphorous">Phosphorous (P)</label>
+                <input type="number" id="phosphorous"  required>
+
+                <label for="potassium">Potassium (K)</label>
+                <input type="number" id="potassium"  required>
+
+                <label for="ph">pH Level</label>
+                <input type="number" step="0.1" id="ph"  required>
+
+                <label for="moisture">Moisture (%)</label>
+                <input type="number" id="moisture"  required>
+
+                <button type="submit" class="btn">Get Recommendation</button>
+            </form>
+        </div>
+
+        <div id="resultCard" class="card result-card" style="display:none;">
+            <h5>🌿 Recommendation Result</h5>
+            <p id="resultText"></p>
+        </div>
+    </section>
+<button type="button" id="voiceBtn" class="btn">🎙️</button>
+</div>
+    <footer>
+        <p>&copy; 2026 AI Smart Farming System | Developed for Academic Project</p>
+    </footer>
+<script src="js/menu.js"></script>
+<script src="js/crop.js"></script>
+<script src="js/voice/voice-crop.js"></script>
+</body>
+</html>

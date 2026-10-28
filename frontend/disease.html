@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disease</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+
+<nav class="navbar">
+<div class="brand">🌿 AI Smart Farming</div>
+</nav>
+
+<div class="sidebar">
+<a href="index.html">🧩 Home</a>
+<a href="weather.html">🌦️ Weather Prediction</a>
+<a href="disease.html">🌾Crop Disease Detection</a>
+<a href="crop.html">🌱Crop & Fertilizer Recommendation</a>
+<a href="market.html">📈 Market Trend Prediction</a>
+<a href="water.html">💧 Water Management</a>
+<a href="schemes.html">🏛️ Government Schemes Recommendation</a>
+<a href="storage.html">📦 Post Harvest Storage</a>
+<a href="about.html">💻 About</a>
+</div>
+
+<div class="main-content">
+
+<section class="page-header">
+        <h2>🌿 Crop Disease Detection</h2>
+        <p>Upload a leaf image to detect crop diseases and get treatment suggestions.</p>
+    </section>
+
+    <!-- Upload Form -->
+    <section class="container form-section">
+        <div class="card form-card">
+            <h4>Upload Crop Leaf Image</h4>
+
+            <form id="diseaseForm" enctype="multipart/form-data">
+                <input
+                    type="file"
+                    id="leafImage"
+                    name="image"
+                    accept="image/*"
+                    required
+                >
+
+                <img
+                    id="previewImage"
+                    alt="Preview"
+                    style="display:none; max-height:200px; margin-top:10px;"
+                >
+
+                <button type="submit" class="btn">Analyze Disease</button>
+            </form>
+        </div>
+
+        <!-- Result Display -->
+        <div id="resultCard" class="card result-card" style="display:none;">
+            <h5>🩺 Analysis Result</h5>
+            <p id="resultText"></p>
+        </div>
+    </section>
+<button type="button" id="voiceBtn" class="btn">🎙️</button>
+</div>
+    <footer>
+        <p>&copy; 2026 AI Smart Farming System | Developed for Academic Project</p>
+    </footer>
+<script src="js/disease.js"></script>
+<script src="js/voice/voice-disease.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>

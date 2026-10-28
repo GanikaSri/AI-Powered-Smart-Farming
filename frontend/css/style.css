@@ -1,0 +1,450 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html,body{
+    height: 100%;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f9f9f9;
+    display:flex;
+    flex-direction:column;
+}
+
+/* ===== TOP NAV ===== */
+.navbar{
+    background:#1B8A52;
+    padding:18px 25px;
+    color:white;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+}
+
+.brand{
+    font-size:22px;
+    font-weight:600;
+    margin-left:auto;
+}
+
+/* ===== MENU BUTTON ===== */
+.menu-toggle{
+    position:fixed;
+    top:14px;
+    left:15px;
+    font-size:24px;
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+    z-index:1300;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:250px;
+    height:100%;
+    background:#1B8A52;
+    padding-top:70px;
+    transform:translateX(-250px);
+    transition:0.3s;
+    z-index:1200;
+}
+
+.sidebar.active{
+    transform:translateX(0);
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:15px 25px;
+}
+
+.sidebar a:hover{
+    background:rgba(255,255,255,0.15);
+}
+
+/* ===== MAIN CONTENT PUSH ===== */
+.main-content{
+    margin-top:45px;
+    padding:0px;
+    transition:0.3s;
+    flex:1;
+}
+
+.main-content.shift{
+    margin-left:250px;
+}
+
+/* ===== HERO ===== */
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+        url('../assets/image/farm-bg.jpg') no-repeat center center/cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+}
+
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+.hero .lead {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero .btn {
+    background-color: #fff;
+    color: #1B8A52;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero .btn:hover {
+    background-color: #f1f1f1;
+}
+
+/* ===== CONTAINERS ===== */
+.container.features {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.container.features h2 {
+    color: #1B8A52;
+    margin-bottom: 2rem;
+}
+
+/* ===== CARDS ===== */
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    width:250px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card h4 {
+    color: #1B8A52;
+    margin-bottom: 0.5rem;
+}
+
+/* Page Header */
+.page-header {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 2rem;
+}
+
+.page-header h2 {
+    color: #1B8A52;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: #555;
+}
+
+/* ===== FORM ===== */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.form-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-card h4 {
+    color: #1B8A52;
+    margin-bottom: 1rem;
+}
+
+.form-card label {
+    display: block;
+    margin: 0.5rem 0 0.25rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.form-card input,
+.form-card select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.form-card .btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1B8A52;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-card .btn:hover {
+    background-color: #166c42;
+}
+
+/* ===== RESULT ===== */
+.result-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.result-card h5 {
+    color: #1B8A52;
+    margin-bottom: 0.5rem;
+}
+/* ===== BUTTON ===== */
+.btn {
+    padding: 0.6rem 1.2rem;
+    background-color: #1B8A52;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #166c42;
+}
+/* ===== FOOTER ===== */
+footer{
+    background:#1B8A52;
+    color:white;
+    text-align:center;
+    padding:15px;
+
+}
+
+/* ===== VOICE BUTTON ===== */
+#voiceBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1B8A52;
+    color: white;
+    font-size: 24px;
+    padding: 15px 18px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+#voiceBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Alert */
+.alert {
+    padding: 0.5rem 1rem;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 6px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+
+/* About & Contact Cards */
+.about-card, .contact-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #fff;
+    margin-bottom: 2rem;
+}
+
+.about-card h4, .contact-card h4 {
+    color: #1B8A52;
+    margin-bottom: 1rem;
+}
+
+.contact-card input,
+.contact-card textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.contact-card .btn {
+    padding: 0.6rem 1.2rem;
+    background-color: #1B8A52;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.contact-card .btn:hover {
+    background-color: #166c42;
+}
+
+/* About & Contact Section Centering */
+.about-section, .contact-section {
+    display: flex;
+    justify-content: center;
+}
+
+.about-card {
+    width: 80%;
+}
+
+.contact-card {
+    width: 50%;
+}
+
+/* Chart Card */
+.chart-card {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #fff;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+     
+}
+
+.chart-card h5 {
+    color: #1B8A52;
+    margin-bottom: 1rem;
+}
+
+a {
+ text-decoration: none;
+  color: black;  
+}
+/* ===== CHART FIX ===== */
+.chart-card {
+    height: 420px;          /* controls chart height */
+    position: relative;
+    padding: 2.3rem;
+}
+
+ .chart-card canvas {
+    width: 100% !important;
+    height: 100%;
+}
+
+.result-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* ===== RECOMMENDATION MESSAGE ===== */
+
+.recommendation-text {
+    margin-top: 1rem;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 90%;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* PROFIT → SELL NOW */
+#priceChart {
+    height: 400px;
+} 
+/* ===== ANIMATION ===== */.scheme-box{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+margin-bottom:12px;
+border-bottom:1px solid #ddd;
+}
+
+.scheme-info h3{
+margin:0;
+font-size:17px;
+color:#222;
+}
+
+.scheme-info p{
+margin-top:5px;
+font-size:14px;
+color:#555;
+}
+
+.scheme-action{
+min-width:220px;
+text-align:right;
+}
+
+.apply-btn{
+background:#1B8A52;
+color:white;
+padding:8px 16px;
+border-radius:6px;
+text-decoration:none;
+font-size:12px;
+font-weight:500;
+}

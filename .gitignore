@@ -1,0 +1,12 @@
+@"
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+media/
+staticfiles/
+training/dataset/
+"@ | Set-Content .gitignore
+db.sqlite3
+

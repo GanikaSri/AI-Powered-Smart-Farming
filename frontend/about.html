@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About </title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+
+<nav class="navbar">
+<div class="brand">🌿 AI Smart Farming</div>
+</nav>
+
+<div class="sidebar">
+<a href="index.html">🧩 Home</a>
+<a href="weather.html">🌦️ Weather Prediction</a>
+<a href="disease.html">🌾Crop Disease Detection</a>
+<a href="crop.html">🌱Crop & Fertilizer Recommendation</a>
+<a href="market.html">📈 Market Trend Prediction</a>
+<a href="water.html">💧 Water Management</a>
+<a href="schemes.html">🏛️ Government Schemes Recommendation</a>
+<a href="storage.html">📦 Post Harvest Storage</a>
+<a href="about.html">💻 About</a>
+</div>
+
+
+
+<div class="main-content">
+
+<!-- Header -->
+    <section class="page-header">
+        <h2>📘 About the Project</h2>
+        <p>Empowering farmers with the power of Artificial Intelligence and data-driven insights.</p>
+    </section>
+
+    <!-- About Content -->
+    <section class="container about-section">
+        <div class="card about-card">
+            <h4>🌾 Project Overview</h4>
+            <p>
+                Agriculture is the backbone of many developing countries, yet farmers often face challenges such as 
+                unpredictable weather, crop diseases, poor soil conditions, and fluctuating market prices. 
+                These problems directly affect productivity and profit, leading to uncertainty and loss of livelihood.
+            </p>
+
+            <p>
+                The <strong>AI Smart Farming System</strong> is designed to provide farmers with intelligent 
+                insights using Artificial Intelligence and Machine Learning. It helps farmers make informed 
+                decisions about weather forecasting, crop health, soil management, irrigation, and market trends 
+                — all through a single integrated platform.
+            </p>
+
+            <h4>💡 Why This Project Is Needed</h4>
+            <p>
+                In traditional farming, most decisions are based on experience rather than data. 
+                This often leads to overuse of fertilizers, inefficient irrigation, and loss from 
+                unexpected weather or disease outbreaks. By applying AI techniques, farmers can 
+                move from guesswork to data-driven strategies that improve yield and sustainability.
+            </p>
+
+            <h4>🌱 How It Helps Farmers</h4>
+            <ul>
+                <li>🌤️ Predicts weather patterns to plan cultivation and irrigation efficiently.</li>
+                <li>🌾 Identifies crop diseases early through AI-based image analysis.</li>
+                <li>🌿 Suggests suitable crops and fertilizers based on soil conditions.</li>
+                <li>📈 Forecasts market price trends to help farmers sell at profitable times.</li>
+                <li>💧 Advises on proper irrigation scheduling and water conservation.</li>
+                <li>🏛️ Recommends government schemes that farmers can benefit from.</li>
+                <li>📦 Provides post-harvest storage and selling advice to minimize losses.</li>
+                <li>🎙️ Allows easy interaction through voice-based assistance.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="container contact-section">
+        <div class="card contact-card">
+            <h4>📬 Contact Us</h4>
+            <form id="contactForm">
+                <label for="name">Your Name</label>
+                <input type="text" id="name"  required >
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email"  required>
+
+                <label for="message">Message / Feedback</label>
+                <textarea id="message" rows="4"  required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div id="thankYou" class="alert" style="display:none;">
+                ✅ Thank you for your feedback! We’ll get back to you soon.
+            </div>
+        </div>
+    </section>
+</div>
+    <footer>
+        <p>&copy; 2026 AI Smart Farming System | Developed for Academic Project</p>
+    </footer>
+<script src="js/menu.js"></script>
+<script src="js/about.js"></script>
+<script src="js/voice/voice-about.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Government Scheme Recommendation</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+
+<nav class="navbar">
+<div class="brand">🌿 AI Smart Farming</div>
+</nav>
+
+<div class="sidebar">
+<a href="index.html">🧩 Home</a>
+<a href="weather.html">🌦️ Weather Prediction</a>
+<a href="disease.html">🌾 Crop Disease Detection</a>
+<a href="crop.html">🌱 Crop & Fertilizer Recommendation</a>
+<a href="market.html">📈 Market Trend Prediction</a>
+<a href="water.html">💧 Water Management</a>
+<a href="schemes.html">🏛️ Government Schemes Recommendation</a>
+<a href="storage.html">📦 Post Harvest Storage</a>
+<a href="about.html">💻 About</a>
+</div>
+
+<div class="main-content">
+
+<section class="page-header">
+<h2>🏛️ Government Scheme Recommendation</h2>
+<p>Find suitable government schemes based on crop, state and land size.</p>
+</section>
+
+<section class="container form-section">
+
+<div class="card form-card">
+
+<h4>Enter Farm Details</h4>
+
+<form id="schemeForm" onsubmit="getScheme(); return false;">
+
+<select id="crop" required>
+<option value="">-- Select Crop --</option>
+<option value="Wheat">Wheat</option>
+<option value="Rice">Rice</option>
+<option value="Maize">Maize</option>
+<option value="Sugarcane">Sugarcane</option>
+<option value="Cotton">Cotton</option>
+</select>
+
+<select id="state" required>
+
+<option value="">-- Select State --</option>
+<option value="All">All</option>
+
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Odisha">Odisha</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Telangana">Telangana</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="Uttarakhand">Uttarakhand</option>
+<option value="West Bengal">West Bengal</option>
+
+</select>
+
+<input type="number" id="land" placeholder="Land Size (hectare)" required>
+<input type="number" id="limit" placeholder="Number of schemes" min="1" max="10" required>
+
+<button type="submit" class="btn">Find Schemes</button>
+
+</form>
+
+</div>
+
+<div class="card result-card" id="resultCard" style="display:none;">
+
+<h5>📝Top Recommended Government Schemes</h5>
+
+<div id="result"></div>
+
+</div>
+
+</section>
+
+<button type="button" id="voiceBtn" class="btn">🎙️</button>
+
+</div>
+
+<footer>
+<p>&copy; 2026 AI Smart Farming System</p>
+</footer>
+
+<!-- JS FILES -->
+<script src="js/schemes.js"></script>
+<script src="js/voice/voice-schemes.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+</html>

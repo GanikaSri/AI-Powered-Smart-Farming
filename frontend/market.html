@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Trend Prediction</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Chart.js (ONLY ONCE) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+
+<nav class="navbar">
+<div class="brand">🌿 AI Smart Farming</div>
+</nav>
+
+<div class="sidebar">
+<a href="index.html">🧩 Home</a>
+<a href="weather.html">🌦️ Weather Prediction</a>
+<a href="disease.html">🌾 Crop Disease Detection</a>
+<a href="crop.html">🌱 Crop & Fertilizer Recommendation</a>
+<a href="market.html">📈 Market Trend Prediction</a>
+<a href="water.html">💧 Water Management</a>
+<a href="schemes.html">🏛️ Government Schemes Recommendation</a>
+<a href="storage.html">📦 Post Harvest Storage</a>
+<a href="about.html">💻 About</a>
+</div>
+
+<div class="main-content">
+
+<section class="page-header">
+    <h2>📊 Market Trend Prediction</h2>
+    <p>View predicted crop prices for smarter market planning and selling.</p>
+</section>
+
+<section class="container form-section">
+    <div class="card form-card">
+        <h4>Select Crop for Price Prediction</h4>
+
+        <form id="marketForm">
+            <select id="crop" required>
+                <option value="">-- Select Crop --</option>
+                <option value="Wheat">Wheat</option>
+                <option value="Rice">Rice</option>
+                <option value="Maize">Maize</option>
+                <option value="Sugarcane">Sugarcane</option>
+                <option value="Cotton">Cotton</option>
+            </select>
+            <select id="month" required>
+    <option value="">-- Select Month --</option>
+    <option value="Jan">Jan</option>
+    <option value="Feb">Feb</option>
+    <option value="Mar">Mar</option>
+    <option value="Apr">Apr</option>
+    <option value="May">May</option>
+    <option value="Jun">Jun</option>
+    <option value="Jul">Jul</option>
+    <option value="Aug">Aug</option>
+    <option value="Sep">Sep</option>
+    <option value="Oct">Oct</option>
+    <option value="Nov">Nov</option>
+    <option value="Dec">Dec</option>
+</select>
+            <button type="submit" class="btn">Predict Price Trend</button>
+        </form>
+    </div>
+
+    <div class="card result-card chart-card" id="resultCard" style="display:none;">
+        <h5>📈 Price Trend</h5>
+        <canvas id="priceChart" height="400"></canvas>
+        <p id="recommendation" style="margin-top:10px; font-weight:bold;"></p>
+    </div>
+</section>
+<button type="button" id="voiceBtn" class="btn">🎙️</button>
+</div>
+
+<footer>
+    <p>&copy; 2026 AI Smart Farming System</p>
+</footer>
+
+<!-- JS FILES -->
+<script src="js/market.js"></script>
+<script src="js/voice/voice-market.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+</html>
